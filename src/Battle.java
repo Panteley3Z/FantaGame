@@ -49,7 +49,7 @@ public class Battle {
             System.out.println("Трах!-Бах!\nПыль-грязь...");
         }
         if (defenderHealth <= 0 && defender instanceof Knight) {
-            System.out.println("Великий воин пал в бою...");
+            System.out.println("Печальная весть...");
             fightResult.fightLost();
             return true;
         } else if(defenderHealth <= 0) {

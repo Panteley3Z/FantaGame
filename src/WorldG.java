@@ -74,7 +74,7 @@ public class WorldG {
             }
             @Override
             public void fightLost() {
-                System.out.printf("    ГАЗЕТА БОЙ\n  Хроника боевого сражения.\nСегодня доблестный воин %s был сражен в битве с неравным врагом...%n", gamer.getName());
+                System.out.printf("\n    ГАЗЕТА БОЙ\n  Хроника боевого сражения.\nСегодня доблестный воин %s был сражен в битве с неравным врагом...%n", gamer.getName());
                 System.exit(1);
             }
         } );
