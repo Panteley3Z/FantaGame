@@ -31,13 +31,14 @@ public class WorldG {
             case "1" -> {
                 System.out.println("\nИдем в магазин!");
                 takeGoods();
+                gameOptions("нет");
             }
             case "2" -> {
                 commitFight();
                 System.out.println("    Удачи!");
             }
             case "3" -> System.exit(1);
-            case "да" -> gameOptions("2");
+            case "да" -> commitFight();
             case "нет" -> {
                 gameNavigation();
                 gameOptions(bufRead.readLine());
@@ -46,14 +47,10 @@ public class WorldG {
         gameOptions(bufRead.readLine());
     }
 
-    private static void takeGoods() {
-        Seller.giveGoods();
-        System.out.println("\nДальше в боевой поход? (да/нет)");
-        try {
-            gameOptions(bufRead.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    private static void takeGoods() throws IOException {
+        Seller.giveGoods(bufRead.readLine());
+        gameOptions("нет");
+
     }
 
     private static void gameNavigation() {
